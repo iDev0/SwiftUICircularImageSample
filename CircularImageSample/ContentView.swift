@@ -10,7 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        // 동그란이미지 만들기
+        // clipShape 로 원하고자 하는 모양을 잡는다
+        // shadow 음영을 주고, overlay로 테두리를 설정한다.
+        Image("pengsu")
+            .clipShape(Circle())
+            .shadow(radius: 10)
+            .overlay(Circle().stroke(Color.black, lineWidth: 5))
     }
 }
 
